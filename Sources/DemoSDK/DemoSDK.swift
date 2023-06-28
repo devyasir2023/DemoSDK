@@ -20,6 +20,7 @@ class SampleViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 50, y: 50, width: 200, height: 100))
         label.text = "Hello, World!"
         label.textAlignment = .center
+        label.textColor = .red
         label.font = UIFont.systemFont(ofSize: 24)
         
         view.addSubview(label)
