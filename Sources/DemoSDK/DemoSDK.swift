@@ -44,6 +44,7 @@ extension UIViewController {
             }
         }
         
+        print("ASDfasdfasdf")
         return SampleViewController()
     }
 }
