@@ -5,15 +5,11 @@ public struct DemoSDK {
 
     public init() { }
     
-    public func launchScreen() -> Void {
-        guard let topController = UIViewController.topViewController() else {
-            return
-        }
-
+    public func launchScreen(from: UIViewController) -> Void {
         let coverViewController = SampleViewController()
         coverViewController.modalPresentationStyle = .fullScreen
         coverViewController.modalTransitionStyle = .crossDissolve
-        topController.present(coverViewController, animated: true, completion: nil)
+        from.present(coverViewController, animated: true, completion: nil)
     }
 }
 
@@ -27,24 +23,5 @@ class SampleViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 24)
         
         view.addSubview(label)
-    }
-}
-
-class YourViewController: UIViewController {
-    override func viewDidLoad() {
-        
-    }
-}
-
-extension UIViewController {
-    static func topViewController() -> UIViewController? {
-        if let topViewController = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = topViewController.presentedViewController {
-                return presentedViewController
-            }
-        }
-        
-        print("ASDfasdfasdf")
-        return SampleViewController()
     }
 }
