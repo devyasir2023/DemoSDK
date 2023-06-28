@@ -1,6 +1,5 @@
 public struct DemoSDK {
-    public private(set) var text = "Hello, World!"
+    public static let shared: DemoSDK = .init()
 
-    public init() {
-    }
+    public init() { }
 }
