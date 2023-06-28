@@ -39,23 +39,31 @@ class YourViewController: UIViewController {
 extension UIViewController {
     static func topViewController() -> UIViewController? {
         
-        if var presentedVC = UIApplication.shared.keyWindow?.rootViewController{
-            // only for flotingbuttons
-            if(presentedVC.isKind(of: YourViewController.self)){
-                let keyWindow = UIApplication.shared.windows[0]
-                if var topController = keyWindow.rootViewController {
-                    while let presentedViewController = topController.presentedViewController {
-                        topController = presentedViewController
-                    }
-                    return topController
-                }
-            }else{
-                while let pVC = presentedVC.presentedViewController {
-                    presentedVC = pVC
-                }
-                return presentedVC
+        if let topViewController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topViewController.presentedViewController {
+                return presentedViewController
             }
+            // Use the topViewController
         }
-        return UIViewController()
+
+        
+//        if var presentedVC = UIApplication.shared.keyWindow?.rootViewController{
+//            // only for flotingbuttons
+//            if(presentedVC.isKind(of: YourViewController.self)){
+//                let keyWindow = UIApplication.shared.windows[0]
+//                if var topController = keyWindow.rootViewController {
+//                    while let presentedViewController = topController.presentedViewController {
+//                        topController = presentedViewController
+//                    }
+//                    return topController
+//                }
+//            }else{
+//                while let pVC = presentedVC.presentedViewController {
+//                    presentedVC = pVC
+//                }
+//                return presentedVC
+//            }
+//        }
+//        return UIViewController()
     }
 }
