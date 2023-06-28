@@ -5,7 +5,7 @@ public struct DemoSDK {
 
     public init() { }
     
-    func launchScreen() -> Void {
+    public func launchScreen() -> Void {
         guard let topController = UIViewController.topViewController() else {
             return
         }
