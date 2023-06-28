@@ -9,7 +9,7 @@ public struct DemoSDK {
         guard let topController = UIViewController.topViewController() else {
             return
         }
-        
+
         let coverViewController = SampleViewController()
         coverViewController.modalPresentationStyle = .fullScreen
         coverViewController.modalTransitionStyle = .crossDissolve
@@ -38,32 +38,12 @@ class YourViewController: UIViewController {
 
 extension UIViewController {
     static func topViewController() -> UIViewController? {
-        
         if let topViewController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topViewController.presentedViewController {
                 return presentedViewController
             }
-            // Use the topViewController
         }
-
         
-//        if var presentedVC = UIApplication.shared.keyWindow?.rootViewController{
-//            // only for flotingbuttons
-//            if(presentedVC.isKind(of: YourViewController.self)){
-//                let keyWindow = UIApplication.shared.windows[0]
-//                if var topController = keyWindow.rootViewController {
-//                    while let presentedViewController = topController.presentedViewController {
-//                        topController = presentedViewController
-//                    }
-//                    return topController
-//                }
-//            }else{
-//                while let pVC = presentedVC.presentedViewController {
-//                    presentedVC = pVC
-//                }
-//                return presentedVC
-//            }
-//        }
-//        return UIViewController()
+        return nil
     }
 }

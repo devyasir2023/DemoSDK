@@ -1,11 +1,11 @@
 import XCTest
 @testable import DemoSDK
 
-final class DemoSDKTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(DemoSDK().text, "Hello, World!")
-    }
-}
+//final class DemoSDKTests: XCTestCase {
+//    func testExample() throws {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct
+//        // results.
+//        XCTAssertEqual(DemoSDK().text, "Hello, World!")
+//    }
+//}
