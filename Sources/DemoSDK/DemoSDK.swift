@@ -44,6 +44,6 @@ extension UIViewController {
             }
         }
         
-        return nil
+        return UIViewController()
     }
 }
